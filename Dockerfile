@@ -10,9 +10,8 @@ RUN mv default.conf default.conf.bak
 # 호스트의 변경된 default.conf 파일을 컨테이너로 복사
 COPY default.conf /etc/nginx/conf.d/default.conf
 
-RUN mkdir /usr/share/nginx/html/product/commodity
-
-COPY index.html /usr/share/nginx/html/product/commodity
+RUN mkdir /usr/share/nginx/html/commodity
+COPY index.html /usr/share/nginx/html/commodity
 
 # 컨테이너가 80번 포트를 사용하도록 설정 (NGINX의 기본 포트)
 EXPOSE 80
